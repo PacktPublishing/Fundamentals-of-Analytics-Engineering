@@ -1,0 +1,120 @@
+version: 2
+
+models:
+  - name: stg_employees
+    description: ""
+    columns:
+      - name: employee_id
+        tests:
+          - unique
+          - not_null
+      - name: contact_number
+      - name: first_name
+      - name: last_name
+      - name: full_name
+      - name: hourly_rate
+      - name: birth_date
+      - name: hired_date
+      - name: airbyte_extracted_at
+      - name: airbyte_meta
+      - name: airbyte_raw_id
+
+  - name: stg_products
+    description: ""
+    columns:
+      - name: product_id
+        tests:
+          - unique
+          - not_null
+      - name: product_name
+        tests:
+          - accepted_values:
+              values: ['Classic Stroopwafel', 'Vanilla Stroopwafel', 'Honey Stroopwafel']
+      - name: unit_cost
+      - name: unit_price
+      - name: airbyte_extracted_at
+      - name: airbyte_meta
+      - name: airbyte_raw_id
+
+  - name: stg_sales
+    description: ""
+    columns:
+      - name: sales_id
+        tests:
+          - unique
+          - not_null
+      - name: employee_id
+        tests:
+          - relationships:
+              to: ref('stg_employees')
+              field: employee_id
+      - name: payment_type
+      - name: total_price
+      - name: total_discount
+      - name: sold_date
+      - name: sold_at
+      - name: airbyte_extracted_at
+      - name: airbyte_meta
+      - name: airbyte_raw_id
+
+  - name: stg_sales_lines
+    description: ""
+    columns:
+      - name: sales_line_id
+        tests:
+          - unique
+          - not_null
+      - name: sales_id
+        tests:
+          - relationships:
+              to: ref('stg_sales')
+              field: sales_id
+      - name: product_id
+        tests:
+          - relationships:
+              to: ref('stg_products')
+              field: product_id
+      - name: quantity_sold
+      - name: discount_rate
+      - name: unit_price
+      - name: unit_discount
+      - name: total_price
+      - name: total_discount
+      - name: airbyte_extracted_at
+      - name: airbyte_meta
+      - name: airbyte_raw_id
+
+
+  - name: stg_shifts
+    description: ""
+    columns:
+      - name: employee_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_employees')
+              field: employee_id
+      - name: shift_hours
+      - name: shift_date
+      - name: shift_start_at
+      - name: shift_end_at
+      - name: airbyte_extracted_at
+      - name: airbyte_meta
+      - name: airbyte_raw_id
+
+  - name: stg_promotions
+    description: ""
+    columns:
+      - name: promotion_id
+        tests:
+          - not_null
+          - unique
+      - name: promotion_name
+      - name: description
+      - name: discount_rate
+      - name: promotion_start_date
+      - name: promotion_end_date
+      - name: is_holiday
+      - name: airbyte_extracted_at
+      - name: airbyte_meta
+      - name: airbyte_raw_id
