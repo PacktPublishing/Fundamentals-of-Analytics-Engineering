@@ -20,10 +20,11 @@ with
             date_of_birth as birth_date,
             hire_date as hired_date
 
-        -- meta
-        {# _airbyte_extracted_at,
+            -- meta
+            _airbyte_extracted_at,
             _airbyte_meta,
-            _airbyte_raw_id, #}
+            _airbyte_raw_id,
+
         from raw_source
     )
 

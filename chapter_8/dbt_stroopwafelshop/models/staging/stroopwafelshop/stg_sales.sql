@@ -21,10 +21,11 @@ with
             -- timestamps
             timestamp(date(date) || ' ' || time) as sold_at
 
-        -- meta
-        {# _airbyte_extracted_at,
+            -- meta
+            _airbyte_extracted_at,
             _airbyte_meta,
-            _airbyte_raw_id #}
+            _airbyte_raw_id
+
         from raw_source
     )
 

@@ -21,6 +21,11 @@ with
             -- booleans
             is_holiday
 
+            -- meta
+            _airbyte_extracted_at,
+            _airbyte_meta,
+            _airbyte_raw_id
+
         from source
     )
 

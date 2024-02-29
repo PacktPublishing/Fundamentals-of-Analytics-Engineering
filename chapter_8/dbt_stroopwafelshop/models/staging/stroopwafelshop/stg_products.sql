@@ -14,9 +14,9 @@ with
             cast(unit_price as numeric) as unit_price
 
             -- meta
-            {# _airbyte_extracted_at,
+            _airbyte_extracted_at,
             _airbyte_meta,
-            _airbyte_raw_id #}
+            _airbyte_raw_id
 
         from raw_source
     )
