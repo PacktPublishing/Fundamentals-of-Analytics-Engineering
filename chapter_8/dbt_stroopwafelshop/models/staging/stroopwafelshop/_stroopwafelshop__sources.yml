@@ -1,0 +1,202 @@
+version: 2
+
+sources:
+  - name: stroopwafelshop
+    schema: stroopwafelshop
+    tables:
+      - name: employees
+        identifier: Employees
+        description: "The employees table contains information about the employees of the stroopwafelshop."
+        columns:
+          - name: _airbyte_raw_id
+            data_type: string
+            description: "Unique identifier for the record"
+          - name: _airbyte_extracted_at
+            data_type: timestamp
+            description: "Timestamp of when the record was extracted"
+          - name: _airbyte_meta
+            data_type: json
+            description: "Metadata about the record"
+          - name: hourly_rate
+            data_type: string
+            description: "Hourly rate of the employee"
+          - name: date_of_birth
+            data_type: string
+            description: "Date of birth of the employee"
+          - name: name
+            data_type: string
+            description: "First name of the employee"
+          - name: last_name
+            data_type: string
+            description: "Last name of the employee"
+          - name: id
+            data_type: string
+            description: "Unique identifier of the employee"
+          - name: hire_date
+            data_type: string
+            description: "Date when the employee was hired"
+          - name: contact_number
+            data_type: string
+            description: "Contact number of the employee"
+
+      - name: products
+        identifier: Products
+        description: "The products table contains information about the products sold by the stroopwafelshop."
+        columns:
+          - name: _airbyte_raw_id
+            data_type: string
+            description: "Unique identifier for the record"
+          - name: _airbyte_extracted_at
+            data_type: timestamp
+            description: "Timestamp of when the record was extracted"
+          - name: _airbyte_meta
+            data_type: json
+            description: "Metadata about the record"
+          - name: unit_cost
+            data_type: float
+            description: "Cost of production per unit of the product"
+          - name: id
+            data_type: integer
+            description: "Unique identifier of the product"
+          - name: unit_price
+            data_type: float
+            description: "Selling price per unit of the product"
+          - name: product_name
+            data_type: string
+            description: "Name of the product"
+
+      - name: sales
+        identifier: Sales
+        description: "The sales table contains information about the sales made by the stroopwafelshop."
+        columns:
+          - name: _airbyte_raw_id
+            data_type: string
+            description: "Unique identifier for the record"
+          - name: _airbyte_extracted_at
+            data_type: timestamp
+            description: "Timestamp of when the record was extracted"
+          - name: _airbyte_meta
+            data_type: json
+            description: "Metadata about the record"
+          - name: date
+            data_type: date
+            description: "Date of the sale"
+          - name: payment_type
+            data_type: string
+            description: "Type of payment used for the sale"
+          - name: total_price
+            data_type: float
+            description: "Total price of the sale, including the discount"
+          - name: total_discount
+            data_type: float
+            description: "Total discount of the sale"
+          - name: employee_id
+            data_type: integer
+            description: "Identifier of the employee who made the sale"
+          - name: weekday
+            data_type: string
+            description: "Day of the week when the sale was made"
+          - name: time
+            data_type: time
+            description: "Time when the sale was made"
+          - name: sales_id
+            data_type: integer
+            description: "Unique identifier of the sale"
+
+      - name: sales_lines
+        identifier: Sales_lines
+        description: >
+          The sales_lines table contains information about the sales lines of the sales made by the stroopwafelshop.
+          For example if a customer buys 2 stroopwafels, there will be 2 sales lines for that sale.
+        columns:
+          - name: id
+            data_type: integer
+            description: "Unique identifier of the sales line"
+          - name: sales_id
+            data_type: integer
+            description: "Identifier of the sale associated with the sales line"
+          - name: product_id
+            data_type: integer
+            description: "Identifier of the product sold in the sales line"
+          - name: promotion_id
+            data_type: integer
+            description: "Identifier of the promotion, if applicable"
+          - name: quantity_sold
+            data_type: integer
+            description: "Quantity of product sold in the sales line"
+          - name: discount_rate
+            data_type: float
+            description: "The discount rate for the product"
+          - name: unit_price
+            data_type: float
+            description: "The original price for a single product"
+          - name: unit_discount
+            data_type: float
+            description: "The discount for a single product"
+          - name: total_price
+            data_type: float
+            description: "The unit price multiplied by the quantity sold, and if applicable, mulitipled by the discount rate"
+          - name: total_discount
+            data_type: float
+            description: "Total discount for the sold products"
+          - name: _airbyte_raw_id
+            data_type: string
+            description: "Unique identifier for the record"
+          - name: _airbyte_extracted_at
+            data_type: timestamp
+            description: "Timestamp of when the record was extracted"
+          - name: _airbyte_meta
+            data_type: json
+            description: "Metadata about the record"
+
+      - name: shifts
+        identifier: Shifts
+        description: "The shifts table contains information about the shifts of the employees of the stroopwafelshop."
+        columns:
+          - name: _airbyte_raw_id
+            data_type: string
+            description: "Unique identifier for the record"
+          - name: _airbyte_extracted_at
+            data_type: timestamp
+            description: "Timestamp of when the record was extracted"
+          - name: _airbyte_meta
+            data_type: json
+            description: "Metadata about the record"
+          - name: date
+            data_type: date
+            description: "Date of the shift"
+          - name: hours
+            data_type: string
+            description: "Hours worked in the shift"
+          - name: role
+            data_type: string
+            description: "Role of the employee during the shift"
+          - name: employee_id
+            data_type: integer
+            description: "Identifier of the employee who worked the shift"
+
+      - name: promotions
+        identifier: Promotions
+        description: The table that contains all the promotions information.
+        columns:
+          - name: id
+            description: The id of the promotion.
+            data_type: integer
+          - name: name
+            description: The name of the promotion.
+            data_type: string
+          - name: start_date
+            description: The start date of the promotion.
+            data_type: date
+          - name: end_date
+            description: The end date of the promotion.
+            data_type: date
+          - name: description
+            description: A detailed description of the promotion.
+            data_type: string
+          - name: discount_rate
+            description: The discount rate of the promotion. This could be a percentage or a flat rate.
+            data_type: float
+          - name: is_holiday
+            description: Indicates whether the promotion is related to a holiday. True if it is, false otherwise.
+            data_type: boolean
