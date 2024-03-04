@@ -1,5 +1,12 @@
 # Setting up Tableau
 
+```
+Requirements
+```
+- From **“Setting up Google Cloud and BigQuery”**
+    o The tableau service account with IAM permissions for BigQuery
+    o The tableau service account’s JSON key file
+
 This is the step-by-step guide to set-up Tableau for creating the visualizations. It contains the
 following sections:
 
@@ -18,10 +25,12 @@ https://www.tableau.com/products/desktop/download. Both Windows and Mac are
 supported. Creating a Tableau account does not require payment details, and there is no
 charge or payment obligation after the 14-day trial. If you want to keep using Tableau
 Desktop after the trial period, you will be prompted to buy a license.
+```
+```
 After you have downloaded the desktop client, install the software, and log in with your
 newly created credentials.
 ```
-### Tableau Public
+### Note – Tableau Desktop
 
 ```
 Besides Tableau Desktop, Tableau also offers a more limited, but free desktop client called
@@ -33,28 +42,37 @@ into Tableau Public.
 If you want to see Tableau in its full glory, you can purchase a license, use a trial, or request
 an academic license (if you are a professor or student).
 ```
+
 ## Connecting to Google BigQuery
 
-```
-One of Tableau’s most appealing features is its multitude of connectors. Tableau can query
-data out of most systems without hassle. For our use case, we just need to connect to
-BigQuery. In the home page, we can choose Google BigQuery and select the signing in
-with a service account, as shown in Figure 8.25. Upload the tableau service account key
-that you downloaded earlier, and sign in.
-```
+One of Tableau’s most appealing features is its multitude of connectors. Tableau connectors
+enable loading data from various sources into Tableau. They provide a straightforward
+method for users to access and import data, whether it's from databases, spreadsheets, or
+cloud services. For our use case, we simply need to connect to BigQuery. In the home page,
+we can choose Google BigQuery and select signing in with a service account, as
+shown in Figure 1. Upload the tableau service account key that you downloaded earlier,
+and sign in.
 
 ```
 Figure 1 - Connecting to BigQuery in Tableau
 ```
 Next, you will need to select the stroopwafelshop project and your dbt dataset
 (dbt_lbenninga in my case). You will see all available tables on the left-hand side as shown
-in Figure 8.26.
+in Figure 2.
 
 
 ```
 Figure 2 - dbt models in Tableau
 ```
 ## Creating the relationships
+
+Tableau allows users to create relationships between different tables of data. It will use the
+appropriate join type based on the defined visualizations. This approach offers a more
+flexible and intuitive way to work with your data, allowing for complex analyses without the
+need for intricate SQL queries or pre-aggregating your data. Read more on Tableau’s
+relationships feature on https://help.tableau.com/current/pro/desktop/en-
+
+## us/relate_tables.htm.
 
 Drag the fct_sales table onto the canvas on the right to start creating the data model. It
 is important that the left-most model is the fact table since the analyses will be run from its
@@ -67,6 +85,7 @@ of the screen and confirm that the join key was valid.
 Repeat the process for the dim_promotions table (not the dim_shifts and
 dim_employees yet _)_ by dragging the tables onto the canvas and matching the _join_ keys.
 Now you have three dimensions to the right of fact_sales.
+
 
 ## Employees and shifts
 
@@ -86,18 +105,14 @@ on the employee_id field.
 Now, fct_sales will be connected to dim_employees through dim_shifts _,_ and
 Tableau can aggregate the sales for all employees related to the sale’s shift hours.
 
-With all the connections in place, as shown in Figure 8.27, the data model is now ready to
-be used in visualizations.
-
+With all the connections in place, as shown in Figure 3 , the data model is now ready to be
+used in visualizations.
 
 ```
 Figure 3 - Defining the relationships in Tableau
 ```
-### Tableau Relationships
 
-Tableau offers a data model with intelligent, automatic joins using _relationships._ Tableau
-will use the appropriate join-type based on the defined visualizations. Read more on
-Tableau’s relationships feature on https://help.tableau.com/current/pro/desktop/en-
-us/relate_tables.htm.
+Now that the relationships have been defined, you can go back to the chapter and continue
+with creating the visualizations.
 
 

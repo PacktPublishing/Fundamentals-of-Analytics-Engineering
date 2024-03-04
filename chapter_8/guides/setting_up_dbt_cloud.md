@@ -1,5 +1,12 @@
 # Setting up dbt Cloud
 
+```
+Requirements
+```
+- From **“Setting up Google Cloud and BigQuery”**
+    o The dbt-cloud service account with IAM permissions for BigQuery
+    o The dbt-cloud service account’s JSON key file
+
 This is the step-by-step guide to set up dbt Cloud for modeling the Stroopwafelshop data. It
 contains the following sections:
 
@@ -28,32 +35,26 @@ warehouses are supported by the dbt open-source package. The connectors to diffe
 warehouses, databases or data platforms are called adapters. You can view the full range of
 adapters here: https://docs.getdbt.com/docs/supported-data-platforms.
 ```
+
 ```
 Figure 1 - Supported data warehouses in dbt Cloud
 ```
-```
 Here are the steps you need to follow to connect to BigQuery:
-```
+
 0. Select BigQuery and click on Next. In the following screen you will be asked for
     credentials (as shown in Figure 2). We will use the service account key file that you
     created earlier for the dbt-cloud service account.
-
-
 1. Locate the key file on your computer, and click Upload a Service Account
+    JSON file to upload it into the dbt Cloud interface. It should automatically fill in all
+    the empty fields on the page.
 
-```
-JSON file to upload it into the dbt Cloud interface. It should automatically fill in all
-the empty fields on the page.
-```
 ```
 Figure 2 - Uploading the service account JSON file
 ```
 2. Then scroll all the way to the bottom of the page. The only thing you should adjust is
+    the Dataset name (shown in Figure 3). Change it to dbt_firstname_lastname,
+    filling in your personal information.
 
-```
-the Dataset name (shown in Figure 3). Change it to dbt_firstname_lastname,
-filling in your personal information.
-```
 ```
 Figure 3 - Changing the dataset name
 ```
@@ -88,10 +89,10 @@ the repository and run it. These hosting platforms also offer more advanced coll
 and automation features, making them an excellent next step in your journey after this
 project.
 
+
 ```
 Figure 4 - Repository hosting in dbt
 ```
-
 5. For now, we will make use of dbt’s own Managed hosting for the repository. Type in
     stroopwafelshop as the name and click Create. You should be congratulated in
     the following screen. Well done!
