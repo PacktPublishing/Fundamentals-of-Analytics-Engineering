@@ -13,7 +13,7 @@ sections:
 
 Let’s start!
 
-## Spreadsheets and Google Sheets
+**Spreadsheets and Google Sheets**
 
 Spreadsheets are everywhere, and here to stay. You can hardly find a company that does
 not use them. Some companies are pretty much entirely run on Excel. As an Analytics
@@ -36,7 +36,7 @@ linking our own Google Sheet, because the Sheet URL could go stale at some point
 future. This way, you can download the original datasets and replicate the Google Sheet by
 creating it yourself.
 
-## Downloading the Stroopwafelshop CSV’s
+**Downloading the Stroopwafelshop CSV’s**
 
 Visit the data folder in the book’s GiHub repository:
 https://github.com/PacktPublishing/Analytics-Engineers-
@@ -54,7 +54,7 @@ repeat for all the CSV files.
 ![Figure 2 – Downloading the CSV file](images/gsheets/gsheets_figure_2.png)
 <center>Figure 2 – Downloading the CSV file</center><p></p>
 
-## Uploading the data into the Google Sheet
+**Uploading the data into the Google Sheet**
 
 Next, create a new Google Sheet. If you are not logged-in with your Google account yet, you
 will need to do so first. Then name your spreadsheet Stroopwafelshop. After that, choose
