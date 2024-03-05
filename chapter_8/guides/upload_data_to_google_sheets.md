@@ -1,7 +1,9 @@
 # Uploading the Stroopwafelshop data to Google Sheets
 
-Requirements:
+<b>Requirements</b>
 - A Google account is required to use Google Sheets
+
+**Intro**
 
 This is the step-by-step guide to set upload the Stroopwafelshop data to Google Sheets so it
 can be used in Chapter 8 - Hands-on Analytics Engineering. It contains the following

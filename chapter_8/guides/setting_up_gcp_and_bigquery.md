@@ -1,5 +1,7 @@
 # Setting up Google Cloud and BigQuery
 
+**Intro**
+
 This is the step-by-step guide to set up Google Cloud and Google BigQuery as part of the
 Stroopwafelshop project. It contains the following steps:
 
