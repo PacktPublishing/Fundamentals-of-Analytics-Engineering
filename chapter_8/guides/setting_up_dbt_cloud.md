@@ -34,7 +34,7 @@ warehouses, databases or data platforms are called adapters. You can view the fu
 adapters here: https://docs.getdbt.com/docs/supported-data-platforms.
 
 ![Figure 1 - Supported data warehouses in dbt Cloud](images/dbt_cloud/dbt_cloud_figure_1.png)
-<center>Figure 1 - Supported data warehouses in dbt Cloud</center><p></p>
+<p align="center">Figure 1 - Supported data warehouses in dbt Cloud</p>
 
 
 Here are the steps you need to follow to connect to BigQuery:
@@ -48,7 +48,7 @@ Here are the steps you need to follow to connect to BigQuery:
     the empty fields on the page.
 
 ![Figure 2 - Uploading the service account JSON file](images/dbt_cloud/dbt_cloud_figure_2.png)
-<center>Figure 2 - Uploading the service account JSON file</center><p></p>
+<p align="center">Figure 2 - Uploading the service account JSON file</p>
 
 
 3. Then scroll all the way to the bottom of the page. The only thing you should adjust is the **Dataset** name. Change it to *dbt_firstname_lastname*, filling in your personal information.
@@ -82,13 +82,13 @@ project.
     *stroopwafelshop* as the name, as shown in Figure 3, and click Create. You should be congratulated in the following screen. Well done!
 
 ![Figure 3 - Repository hosting in dbt](images/dbt_cloud/dbt_cloud_figure_3.png)
-<center>Figure 3 - Repository hosting in dbt</center><p></p>
+<p align="center">Figure 3 - Repository hosting in dbt</p>
 
 6. Click on Start developing in the IDE. This will bring you into the Integrated
     Development Environment, also known as the IDE, as shown in Figure 4.
 
 ![Figure 4 - The dbt Cloud IDE](images/dbt_cloud/dbt_cloud_figure_4.png)
-<center>Figure 4 - The dbt Cloud IDE</center><p></p>
+<p align="center">Figure 4 - The dbt Cloud IDE</p>
 
 **IDEs – A quick overview**
 
@@ -122,7 +122,7 @@ The dbt Cloud IDE will send the SQL to be executed to the data warehouse, in thi
 BigQuery, and display the results in the IDE (as shown in Figure 5). 
 
 ![Figure 5 - Preview results](images/dbt_cloud/dbt_cloud_figure_5.png)
-<center>Figure 5 - Preview results</center><p></p>
+<p align="center">Figure 5 - Preview results</p>
 
 Since there are only a few rows returned, all will be displayed. This confirms that the connection works, and we can move on in chapter 8.
 

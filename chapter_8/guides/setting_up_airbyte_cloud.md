@@ -1,6 +1,6 @@
 # Setting up Airbyte Cloud
 
-<b>Requirements</b>
+**Requirements**
 
 - From [Uploading the Stroopwafelshop data to Google Sheets](upload_data_to_google_sheets.md)
     - The Google account you used to create the Google Sheet
@@ -31,7 +31,7 @@ Let’s start!
 To use Airbyte, you will have to create an account on https://cloud.airbyte.com/signup.
 Unlike signing up for Google Cloud, no payment information is required. In fact, you will get
 a 14 - day free trial in which you can use Airbyte as you like. After this trial period, you
-cannot load (<b>sync</b>) more data using Airbyte unless you buy credits. Credits are then
+cannot load (**sync**) more data using Airbyte unless you buy credits. Credits are then
 consumed by each sync until they run out. Even if you do not buy the credits your account
 will still be accessible, you just will not be able to extract anything anymore. Read up on
 https://airbyte.com/pricing to learn more. For the Stroopwafelshop use case, the 14-day
@@ -43,13 +43,13 @@ You can do this by clicking Continue with Google. Alternatively, you can set up 
 account by signing up using email at the bottom (as shown in Figure 1).
 
 ![Figure 1 - Signing up for Airbyte](images/airbyte/airbyte_figure_1.png)
-<center>Figure 1 - Signing up for Airbyte</center><p></p>
+<p align="center">Figure 1 - Signing up for Airbyte</p>
 
 Once the registration process is complete, you should see the main screen where we are
 welcomed by the Airbyte visual.
 
-Next, we want to create our first <i>connection</i>. In Airbyte, a connection loads data from a
-<i>source</i> to a <i>destination</i> , for instance from Google Sheets to Google BigQuery. Airbyte
+Next, we want to create our first *connection*. In Airbyte, a connection loads data from a
+*source* to a *destination* , for instance from Google Sheets to Google BigQuery. Airbyte
 supports a variety of sources and destinations. Click to create the connection. Next up, you
 will see a list of available source connectors.
 
@@ -62,17 +62,17 @@ https://docs.airbyte.com/integrations/.
 **Creating the Google Sheets connection**
 
 In this case, we want to connect to Google Sheets, which is officially supported by
-Airbyte. Search for <b>Google Sheets</b>, as shown in Figure 2 , and choose it.
+Airbyte. Search for **Google Sheets**, as shown in Figure 2 , and choose it.
 
 
 ![Figure 2 - Searching for the Google Sheets source](images/airbyte/airbyte_figure_2.png)
-<center>Figure 2 - Searching for the Google Sheets source></center><p></p>
+<p align="center">Figure 2 - Searching for the Google Sheets source></p>
 
-In the New connection screen, rename the Source name to <i>stroopwafelshop_sales</i>. 
-We want to give each source a unique name to distinguish them from each other, since we will connect to each tab in our Google Sheet.  Next, click <b>Sign in with Google</b> to give access to your Google Sheets account using SSO, as shown in Figure 3.
+In the New connection screen, rename the Source name to *stroopwafelshop_sales*. 
+We want to give each source a unique name to distinguish them from each other, since we will connect to each tab in our Google Sheet.  Next, click **Sign in with Google** to give access to your Google Sheets account using SSO, as shown in Figure 3.
 
 ![Figure 3 - Authenticating with a Google account using SSO](images/airbyte/airbyte_figure_3.png)
-<center>Figure 3 - Authenticating with a Google account using SSO</center><p></p>
+<p align="center">Figure 3 - Authenticating with a Google account using SSO</p>
 
 By using SSO, you grant Airbyte access to directly read from Google Sheets using your
 credentials. Airbyte will handle authentication and store the credentials for you.
@@ -87,7 +87,7 @@ Sheet. In our Google Sheet, click the Share button in the top right corner (show
 4).
 
 ![Figure 4 - Sharing the Google Sheet](images/airbyte/airbyte_figure_4.png)
-<center>Figure 4 - Sharing the Google Sheet</center><p></p>
+<p align="center">Figure 4 - Sharing the Google Sheet</p>
 
 Then in the pop-up, select the Copy link button to copy the spreadsheet’s URL. It should
 be similar to https://docs.google.com/spreadsheets/d/<ID>/edit#gid=0.
@@ -116,7 +116,7 @@ we collected when setting up Google Cloud and BigQuery, including the *service a
 key file* you downloaded earlier (refer to [Setting up Google Cloud and BigQuery](setting_up_gcp_and_bigquery.md)).
 
 ![Figure 5 - Creating the BigQuery destination](images/airbyte/airbyte_figure_5.png)
-<center>Figure 5 - Creating the BigQuery destination</center><p></p>
+<p align="center">Figure 5 - Creating the BigQuery destination</p>
 
 First, set the **Destination name** to *stroopwafelshop* in order to identify the
 destination in Airbyte. Then, fill in your Google Cloud project id (which you can find in the
@@ -138,7 +138,7 @@ You can finalize setting up the destination by selecting **Set up destination** 
 shown in Figure 6.
 
 ![Figure 6 - Setting up the BigQuery destination](images/airbyte/airbyte_figure_6.png)
-<center>Figure 6 - Setting up the BigQuery destination</center><p></p>
+<p align="center">Figure 6 - Setting up the BigQuery destination</p>
 
 Airbyte will check the validity of the details and credentials you provided, similar to setting
 up the source _,_ to make sure everything is working.
@@ -148,7 +148,7 @@ configuration, as shown in Figure 7. Almost there!
 
 Figure 7 - Connection configuration
 ![Figure 7 - Connection configuration](images/airbyte/airbyte_figure_7.png)
-<center>Figure 7 - Connection configuration</center><p></p>
+<p align="center">Figure 7 - Connection configuration</p>
 
 **Connection configuration**
 
@@ -166,7 +166,7 @@ Google Sheet, they are the individual worksheets (tabs). Since we have six diffe
 (*Sales*, *Sales lines*, *Products*, *Promotions*, *Employees* and *Shifts*), we will see the different streams as shown in Figure 8.
 
 ![Figure 8 - Streams in the Connection](images/airbyte/airbyte_figure_8.png)
-<center>Figure 8 - Streams in the Connection</center><p></p>
+<p align="center">Figure 8 - Streams in the Connection</p>
 
 Airbyte treats the streams as separate components inside the connection. Next to each
 stream, you can see the *sync mode*, which indicates that each time we run a sync, it will
@@ -187,7 +187,7 @@ Take a look in BigQuery, you should see that the tables have been created in the
 ```
 
 ![Figure 9 - Tables created in the BigQuery](images/airbyte/airbyte_figure_9.png)
-<center>Figure 9 - Tables created in the BigQuery</center><p></p>
+<p align="center">Figure 9 - Tables created in the BigQuery</p>
 
 Alongside *stroopwafelshopdata*, you can see that Airbyte created another dataset
 called *airbyte_internal* which it uses to store copies of the raw data during
@@ -200,7 +200,7 @@ fields such as *__airbyte_raw_id_* , and *__airbyte_extracted_at_* are *metadata
 about when the data was ingested as shown in Figure 10.
 
 ![Figure 10 - Airbyte’s metadata fields](images/airbyte/airbyte_figure_10.png)
-<center>Figure 10 - Airbyte’s metadata fields</center><p></p>
+<p align="center">Figure 10 - Airbyte’s metadata fields</p>
 
 Whenever you load data into a database, you should add an ingestion date and timestamp
 to indicate that data is *fresh* (recent)._ Also, it will help with debugging issues later.
@@ -218,7 +218,7 @@ tabs available to us, such as **Status**, **Job History**, **Replication**, **Tr
 Click on the Job History tab to move to the history overview, as shown in Figure 11.
 
 ![Figure 11 - Job history](images/airbyte/airbyte_figure_11.png)
-<center>Figure 11 - Job history</center><p></p>
+<p align="center">Figure 11 - Job history</p>
 
 In here, we see details on the sync that was performed. A summary of the sync tells us that it
 was a successful run, the size of the data transferred (*5.08MB*), the amount of records
@@ -228,7 +228,7 @@ three dots and choosing **View logs**, as shown in Figure 12.
 
 
 ![Figure 12 - Logging details](images/airbyte/airbyte_figure_12.png)
-<center>Figure 12 - Logging details</center><p></p>
+<p align="center">Figure 12 - Logging details</p>
 
 By viewing the logs, we can see the actual *SQL* statements executed by Airbyte in BigQuery
 and gain a better understanding about what Airbyte is doing behind the scenes. In case of

@@ -1,6 +1,6 @@
 # Uploading the Stroopwafelshop data to Google Sheets
 
-<b>Requirements</b>
+**Requirements**
 - A Google account is required to use Google Sheets
 
 **Intro**
@@ -31,7 +31,7 @@ automated ingestion. Later, we will use Airbyte to make use of this API to conne
 extract the data from the application. But before that, we need to upload the Stroopwafel
 datasets into a spreadsheet.
 
-> <b>Why don’t you provide the Google Sheet?</b>
+> **Why don’t you provide the Google Sheet?**
 >
 >We chose to provide you with the original datasets in CSV format on GitHub instead of
 linking our own Google Sheet, because the Sheet URL could go stale at some point in the
@@ -46,7 +46,7 @@ Handbook/tree/main/chapter_8/data. You will be able to see all the CSV files the
 shown in Figure 1.
 
 ![Figure 1 – CSV files in the GitHub repository](images/gsheets/gsheets_figure_1.png)
-<center>Figure 1 – CSV files in the GitHub repository</center><p></p>
+<p align="center">Figure 1 – CSV files in the GitHub repository</p>
 
 Now select one of the files, such as employees.csv. This brings you to the file’s page.
 There you can download the file to your local machine, as shown in Figure 2. Do that, and
@@ -54,7 +54,7 @@ repeat for all the CSV files.
 
 
 ![Figure 2 – Downloading the CSV file](images/gsheets/gsheets_figure_2.png)
-<center>Figure 2 – Downloading the CSV file</center><p></p>
+<p align="center">Figure 2 – Downloading the CSV file</p>
 
 **Uploading the data into the Google Sheet**
 
@@ -65,13 +65,13 @@ local machine. When choosing the import settings, select Insert new sheet(s), as
 in Figure 3, so that each file is stored in its own sheet (tab).
 
 ![Figure 3 – Inserting the new sheets](images/gsheets/gsheets_figure_3.png)
-<center>Figure 3 – Inserting the new sheets</center><p></p>
+<p align="center">Figure 3 – Inserting the new sheets</p>
 
 When all CSV’s have been uploaded, remove the first, unnamed sheet so you end up with
 six, as shown in Figure 4.
 
 ![Figure 4 – All six sheets have been created](images/gsheets/gsheets_figure_4.png)
-<center>Figure 4 – All six sheets have been created</center><p></p>
+<p align="center">Figure 4 – All six sheets have been created</p>
 
 Your Google Sheet now contains all the sheets that are necessary for working with the data.
 You can return to the chapter and continue.

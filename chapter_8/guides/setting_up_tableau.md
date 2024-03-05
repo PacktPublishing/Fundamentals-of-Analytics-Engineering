@@ -59,7 +59,7 @@ Next, you will need to select the *stroopwafelshop* project and your dbt dataset
 in Figure 2. If you cannot see the dataset/tables, make sure that you followed the steps for creating the service account in [Setting up Google Cloud and BigQuery](setting_up_gcp_and_bigquery.md) correctly.
 
 ![Figure 2 - dbt models in Tableau](images/tableau/tableau_figure_2.png)
-<center>Figure 2 - dbt models in Tableau</center><p></p>
+<p align="center">Figure 2 - dbt models in Tableau</p>
 
 **Creating the relationships**
 
@@ -104,7 +104,7 @@ With all the connections in place, as shown in Figure 3 , the data model is now 
 used in visualizations.
 
 ![Figure 3 - Defining the relationships in Tableau](images/tableau/tableau_figure_3.png)
-<center>Figure 3 - Defining the relationships in Tableau</center><p></p>
+<p align="center">Figure 3 - Defining the relationships in Tableau</p>
 
 Now that the relationships have been defined, you can go back to the chapter and continue with creating the visualizations.
 
