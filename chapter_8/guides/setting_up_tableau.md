@@ -51,7 +51,7 @@ shown in Figure 1. Upload the *tableau* service account key that you downloaded 
 and sign in.
 
 ![Figure 1 - Connecting to BigQuery in Tableau](images/tableau/tableau_figure_1.png)
-<center>Figure 1 - Connecting to BigQuery in Tableau</center><p></p>
+<p align="center">Figure 1 - Connecting to BigQuery in Tableau</p>
 
 
 Next, you will need to select the *stroopwafelshop* project and your dbt dataset
