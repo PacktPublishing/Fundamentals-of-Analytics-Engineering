@@ -69,7 +69,7 @@ Airbyte. Search for <b>Google Sheets</b>, as shown in Figure 2 , and choose it.
 <center>Figure 2 - Searching for the Google Sheets source></center><p></p>
 
 In the New connection screen, rename the Source name to <i>stroopwafelshop_sales</i>. 
-We want to give each source a unique name to distinguish them from each other, since we will connect to each tab in our Google Sheet. Next, click <b>Sign in with Google</b> to give access to your Google Sheets account using SSO, as shown in Figure 3.
+We want to give each source a unique name to distinguish them from each other, since we will connect to each tab in our Google Sheet.  Next, click <b>Sign in with Google</b> to give access to your Google Sheets account using SSO, as shown in Figure 3.
 
 ![Figure 3 - Authenticating with a Google account using SSO](images/airbyte/airbyte_figure_3.png)
 <center>Figure 3 - Authenticating with a Google account using SSO</center><p></p>
@@ -77,9 +77,10 @@ We want to give each source a unique name to distinguish them from each other, s
 By using SSO, you grant Airbyte access to directly read from Google Sheets using your
 credentials. Airbyte will handle authentication and store the credentials for you.
 
-> Note: SSO vs service account 
+> Note: SSO vs service account
 >
-> For simplicity, we choose to authenticate with your Google account using SSO. Since you created the spreadsheet earlier using the same account, you should be  
+> For simplicity, we choose to authenticate with your Google account using SSO.
+> Since you created the spreadsheet earlier using the same account, you should be to access it using its URL.
 
 Next, you will need to visit the Google Sheet you created earlier and fetch the link to the
 Sheet. In our Google Sheet, click the Share button in the top right corner (shown in Figure
