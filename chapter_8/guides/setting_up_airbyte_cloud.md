@@ -4,12 +4,12 @@
 
 - From [Uploading the Stroopwafelshop data to Google Sheets](upload_data_to_google_sheets.md)
     - The Google account you used to create the Google Sheet
-    - The stroopwafelshop Google Sheet
+    - The *stroopwafelshop* Google Sheet
 
 - From [Setting up Google Cloud and BigQuery](setting_up_gcp_and_bigquery.md)
-    - The stroopwafelshopdata BigQuery dataset
-    - The airbyte service account with IAM permissions for BigQuery
-    - The airbyte service account’s JSON key file
+    - The *stroopwafelshopdata* BigQuery dataset
+    - The *airbyte* service account with IAM permissions for BigQuery
+    - The *airbyte* service account’s JSON key file
 
 **Intro**
 
