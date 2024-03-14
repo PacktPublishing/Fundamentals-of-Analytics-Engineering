@@ -1,4 +1,4 @@
-# Analytics Engineers Handbook Companion Repository
+# Fundamentals of Analytics Engineering Companion Repository
 
 Welcome to the companion repository for the Analytics Engineers Handbook. This repository contains all the code and guides that are used throughout the book. It's designed to help you follow along with the book and implement the concepts discussed.
 
