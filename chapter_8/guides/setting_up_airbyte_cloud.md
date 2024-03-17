@@ -90,7 +90,7 @@ Sheet. In our Google Sheet, click the Share button in the top right corner (show
 <p align="center">Figure 4 - Sharing the Google Sheet</p>
 
 Then in the pop-up, select the Copy link button to copy the spreadsheet’s URL. It should
-be similar to https://docs.google.com/spreadsheets/d/<ID>/edit#gid=0.
+be similar to https://docs.google.com/spreadsheets/d/12345/edit#gid=0.
 
 **Add the spreadsheet link in Airbyte**
 

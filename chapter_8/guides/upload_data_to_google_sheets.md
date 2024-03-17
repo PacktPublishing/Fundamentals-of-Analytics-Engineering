@@ -41,8 +41,7 @@ creating it yourself.
 **Downloading the Stroopwafelshop CSV’s**
 
 Visit the data folder in the book’s GiHub repository:
-https://github.com/PacktPublishing/Analytics-Engineers-
-Handbook/tree/main/chapter_8/data. You will be able to see all the CSV files there, as
+https://github.com/PacktPublishing/Analytics-Engineers-Handbook/tree/main/chapter_8/data. You will be able to see all the CSV files there, as
 shown in Figure 1.
 
 ![Figure 1 – CSV files in the GitHub repository](images/gsheets/gsheets_figure_1.png)

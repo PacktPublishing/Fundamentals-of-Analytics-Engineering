@@ -67,13 +67,10 @@ Once you are happy with your code, you can promote the code to be run on the ded
 **More on Git**
 
 Git provides powerful features that make collaborating with multiple developers easier. You
-can read up on Git’s features and its use in dbt Cloud on
-https://docs.getdbt.com/docs/collaborate/git-version-control. These repositories can be
-created and hosted on different platforms, one of the most popular being Microsoft’s
-GitHub. The open-source version of dbt is also hosted on GitHub: https://github.com/dbt-
-labs/dbt-core. If you were to use a hosting platform, you would then provide credentials to
-dbt Cloud and point it toward the repository URL. dbt Cloud would then pull the code from
-the repository and run it. These hosting platforms also offer more advanced collaboration
+can read up on Git’s features and its use in dbt Cloud on https://docs.getdbt.com/docs/collaborate/git-version-control. These repositories can be created and hosted on different platforms, one of the most popular being Microsoft’s GitHub. The open-source version of dbt is also hosted on GitHub: https://github.com/dbt-labs/dbt-core.
+
+If you were to use a hosting platform, you would then provide credentials to dbt Cloud and point it toward the repository URL.
+dbt Cloud would then pull the code from the repository and run it. These hosting platforms also offer more advanced collaboration
 and automation features, making them an excellent next step in your journey after this
 project.
 
@@ -102,8 +99,7 @@ source version of dbt is a Python package that is usable from the command line, 
 possible to download both to your local machine and use an IDE of your own choice. In fact,
 plenty of analytics engineers do this. However, if an IDE is a new concept to you then dbt
 Cloud’s browser-based IDE offers a gentle introduction to working with one. Read more
-about the dbt Cloud IDE on https://docs.getdbt.com/docs/cloud/dbt-cloud-ide/develop-
-in-the-cloud.
+about the dbt Cloud IDE on https://docs.getdbt.com/docs/cloud/dbt-cloud-ide/develop-in-the-cloud.
 
 7. Next, in the top-left corner, select **Initialize dbt project** button. This will set up the project and create all the files necessary in the **File Explorer**.
 
