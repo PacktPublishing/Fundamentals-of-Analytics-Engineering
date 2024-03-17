@@ -89,8 +89,10 @@ Sheet. In our Google Sheet, click the Share button in the top right corner (show
 ![Figure 4 - Sharing the Google Sheet](images/airbyte/airbyte_figure_4.png)
 <p align="center">Figure 4 - Sharing the Google Sheet</p>
 
+<!-- markdown-link-check-disable -->
 Then in the pop-up, select the Copy link button to copy the spreadsheet’s URL. It should
 be similar to https://docs.google.com/spreadsheets/d/12345/edit#gid=0.
+<!-- markdown-link-check-enable -->
 
 **Add the spreadsheet link in Airbyte**
 
@@ -173,7 +175,7 @@ stream, you can see the *sync mode*, which indicates that each time we run a syn
 fetch all data in the stream and overwrite the existing data in the destination. Another
 option would be to *append* data to the table. In our case, overwriting is fine, so keep the
 default option. You can read up on all the options of syncing data and dealing with changing
-schemas at https://docs.airbyte.com/category/using-airbyte-cloud.
+schemas at https://docs.airbyte.com/cloud/managing-airbyte-cloud/configuring-connections.
 
 Next, make sure that all streams will be synced by toggling the *Sync* button. Finally, select
 the **Set up connection** in the bottom right corner to save the configuration. Now
