@@ -16,7 +16,8 @@ contains the following sections:
 3. Initializing the project
 4. Creating a branch
 5. Testing the connection
-6. Potential issues
+6. Deleting the example models
+7. Potential issues
 
 Let’s start!
 
@@ -131,13 +132,27 @@ Make sure that `Employees` is capitalized since BigQuery tables are case-sensiti
 The dbt Cloud IDE will send the SQL to be executed to the data warehouse, in this case
 BigQuery, and display the results in the IDE (as shown in Figure 5). 
 
-<img src="images/dbt_cloud/dbt_cloud_figure_8.png" alt="Figure 8 - Preview results" width="500"/>
-<p align="center">Figure 8 - Preview results</p>
+<img src="images/dbt_cloud/dbt_cloud_figure_8.png" alt="Figure 8 - Testing the connection" width="500"/>
+<p align="center">Figure 8 - Testing the connection</p>
 
-Since there are only a few rows returned, all will be displayed. This confirms that the connection works. You can close and disregard the `Untitled-1` file you just created. Another good thing to know is how to create files and folders. You can do this in the **File explorer** window by using the three dots next to files/folders as shown in Figure 9. Later on, you will need to use this functionality to create the files and folders discussed in the book.
+Since there are only a few rows returned, all will be displayed. This confirms that the connection works. You can close and disregard the `Untitled-1` file you just created.
 
-<img src="images/dbt_cloud/dbt_cloud_figure_9.png" alt="Figure 9 - Creating new files and folders" width="500"/>
-<p align="center">Figure 9 - Creating new files/folders</p>
+Next, open up the `models` folder on the left-hand side of the screen. You should see a subfolder named `example`. This contains some example models that dbt Cloud has created for you. Click on `my_first_dbt_model.sql` to open it. It will display the model's code in the center of the screen. Preview it to show the results, as shown in Figure 9.
+
+<img src="images/dbt_cloud/dbt_cloud_figure_9.png" alt="Figure 9 - Previewing the example model" width="500"/>
+<p align="center">Figure 9 - Previewing the example model</p>
+
+You can see that the model is working, and that the connection to BigQuery is functioning correctly. You can play around with the other functionaltiy in the IDE if you want. Don't worry, you can't break anything. Once you are ready to continue, we will remove the `example` folder since we will be creating our own models.
+
+**Deleting the example models**
+
+We don't need the `example` models since we will create our own. You can create/rename/delete files and folders in the **File explorer** window by using the three dots next to files/folders. Click on the three dots next to the `example` folder and select **Delete** as shown in Figure 10. Then confirm the deletion by selecting **Delete** in the pop-up window.
+
+<img src="images/dbt_cloud/dbt_cloud_figure_10.png" alt="Figure 10 - Deleting the example models" width="500"/>
+<p align="center">Figure 10 - Deleting the example models</p>
+
+ Next, commit this change into the branch by selecting **Commit and sync**. Fill in a commit message, for example *Removed example models*, and select **Commit Changes**. Now, the `example` folder is removed from the branch and the changes are saved. You are ready to continueing working on the project.
+
 
 Congratulations! You have successfully set up dbt Cloud and tested the connection to BigQuery. Continue from where you left off in  chapter 8, and start modeling the data in dbt Cloud.
 
@@ -147,7 +162,7 @@ Congratulations! You have successfully set up dbt Cloud and tested the connectio
 
 If you encounter errors while trying to preview the query results, these are likely due to an
 issue with the BigQuery connection in dbt Cloud, or with the permissions granted to the
-service account you are using. Ensure that you followed the steps in [Setting up Google Cloud and BigQuery](setting_up_gcp_and_bigquery.md) correctly.
+service account you are using. Ensure that you followed the steps in [Setting up Google Cloud and BigQuery]() correctly.
 
 
 ### Can't create files or folders, or change existing files
