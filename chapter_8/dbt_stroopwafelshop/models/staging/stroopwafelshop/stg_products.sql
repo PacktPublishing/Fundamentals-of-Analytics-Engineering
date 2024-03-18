@@ -11,7 +11,7 @@ with
 
             -- numerics
             cast(unit_cost as numeric) as unit_cost,
-            cast(unit_price as numeric) as unit_price
+            cast(unit_price as numeric) as unit_price,
 
             -- meta
             _airbyte_extracted_at,

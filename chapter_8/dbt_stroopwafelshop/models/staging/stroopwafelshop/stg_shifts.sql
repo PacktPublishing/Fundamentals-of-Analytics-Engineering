@@ -4,7 +4,7 @@ with
     shifts as (
         select
             -- ids
-            farm_fingerprint(concat(date, employee_id, role, hours)) as shift_id,
+            FARM_FINGERPRINT(CONCAT(date, employee_id, role, hours)) as shift_id,
             employee_id,
 
             -- strings
@@ -23,7 +23,7 @@ with
             parse_timestamp(
                 '%Y-%m-%d %H:%M',
                 concat(cast(date as string), ' ', split(hours, '-')[offset(1)])
-            ) as shift_end_at
+            ) as shift_end_at,
 
             -- meta
             _airbyte_extracted_at,

@@ -19,7 +19,7 @@ with
             date(end_date) as promotion_end_date,
 
             -- booleans
-            is_holiday
+            is_holiday,
 
             -- meta
             _airbyte_extracted_at,

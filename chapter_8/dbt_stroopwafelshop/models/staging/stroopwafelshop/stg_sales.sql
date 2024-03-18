@@ -19,7 +19,7 @@ with
             date(date) as sold_date,
 
             -- timestamps
-            timestamp(date(date) || ' ' || time) as sold_at
+            timestamp(date(date) || ' ' || time) as sold_at,
 
             -- meta
             _airbyte_extracted_at,

@@ -18,7 +18,7 @@ with
 
             -- dates
             date_of_birth as birth_date,
-            hire_date as hired_date
+            hire_date as hired_date,
 
             -- meta
             _airbyte_extracted_at,
