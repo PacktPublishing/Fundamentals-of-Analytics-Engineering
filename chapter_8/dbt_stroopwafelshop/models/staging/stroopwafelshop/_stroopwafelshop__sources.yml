@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: stroopwafelshop
-    schema: stroopwafelshop
+    schema: stroopwafelshopdata
     tables:
       - name: employees
         identifier: Employees
