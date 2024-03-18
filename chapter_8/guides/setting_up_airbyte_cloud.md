@@ -122,7 +122,7 @@ key file* you downloaded earlier (refer to [Setting up Google Cloud and BigQuery
 
 First, set the **Destination name** to *stroopwafelshop* in order to identify the
 destination in Airbyte. Then, fill in your Google Cloud project id (which you can find in the
-Google Cloud console and should be similar to *stroopwafelshop-<some-numbers>*)
+Google Cloud console and should be similar to *stroopwafelshop-12345*)
 in the **Project ID** field.
 
 Back in Airbyte, fill in *stroopwafelshopdata* in the **Default Dataset ID** field. Once
@@ -185,7 +185,7 @@ the sync was successful.
 
 ```
 Take a look in BigQuery, you should see that the tables have been created in the
-*stroopwafelshop* dataset, as shown in Figure 9.
+*stroopwafelshopdata* dataset, as shown in Figure 9.
 ```
 
 ![Figure 9 - Tables created in the BigQuery](images/airbyte/airbyte_figure_9.png)
@@ -194,7 +194,7 @@ Take a look in BigQuery, you should see that the tables have been created in the
 Alongside *stroopwafelshopdata*, you can see that Airbyte created another dataset
 called *airbyte_internal* which it uses to store copies of the raw data during
 extraction. You can safely ignore this dataset for now. The actual datasets are stored in the
-*stroopwafelshop* dataset.
+*stroopwafelshopdata* dataset.
 
 Looking at the *Employee*s table, we can see the fields from the data that we
 expected, like *role*, *hourly_rate*, *name*, and new fields that were added by Airbyte. These
