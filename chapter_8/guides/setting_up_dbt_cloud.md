@@ -67,13 +67,17 @@ Git provides powerful features that make collaborating with multiple developers 
 > Alternatively, you can create your own repository on GitHub, and copy the dbt project code from the current repository into your own. This way, all your changes are automatically stored in your GitHub repository, instead of in dbt's "Managed" repository. However, this requires some extra setup like [creating a GitHub repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository), and [creating a connection to GitHub](https://docs.getdbt.com/docs/cloud/git/connect-github), which is not part of the scope of this tutorial.
 >
 
-For now, we will make use of dbt’s own Managed hosting for the repository. Type in *stroopwafelshop* as the name, as shown in Figure 3, and click Create. You should be congratulated in the following screen. Well done!
+For now, we will make use of dbt’s own Managed hosting for the repository. Type in *stroopwafelshop* as the name, as shown in Figure 3a.
 
-![Figure 3 - Repository hosting in dbt](images/dbt_cloud/dbt_cloud_figure_3.png)
-<p align="center">Figure 3 - Repository hosting in dbt</p>
+![Figure 3a - Repository hosting in dbt](images/dbt_cloud/dbt_cloud_figure_3a.png)
+<p align="center">Figure 3a - Repository hosting in dbt</p>
 
+Then scroll down to the **Location** field, and add `EU` (as shown in Figure 3b) since that is the location of the BigQuery dataset.
 
-Click on **Start developing in the IDE**. This will bring you into the Integrated Development Environment, also known as the IDE, as shown in Figure 4.
+<img src="images/dbt_cloud/dbt_cloud_figure_3b.png" width="500"/>
+<p align="center">Figure 3b - Selecting the 'EU' location</p>
+
+Finally, select **Create**. This will create the project. In the next screen, click on **Start developing in the IDE**. This will bring you into the Integrated Development Environment, also known as the IDE, as shown in Figure 4.
 
 ![Figure 4 - The dbt Cloud IDE](images/dbt_cloud/dbt_cloud_figure_4.png)
 <p align="center">Figure 4 - The dbt Cloud IDE</p>
@@ -158,6 +162,8 @@ Congratulations! You have successfully set up dbt Cloud and tested the connectio
 
 ## Potential issues
 
+Note the following potential issues if you are having trouble with dbt Cloud in the chapter.
+
 ### Errors in the connection to BigQuery
 
 If you encounter errors while trying to preview the query results, these are likely due to an
@@ -168,3 +174,30 @@ service account you are using. Ensure that you followed the steps in [Setting up
 ### Can't create files or folders, or change existing files
 
 If you encounter this issue, it is most likely that you have not created your own branch yet. You need to create a branch before you can perform any of these actions. The default, `main` branch is read-only and cannot be used for changes. Use the **Create branch** button to create a new branch. If you have created your own branch, ensure that you are working in the correct branch. The name of the branch is displayed in the top-left corner of the IDE. If you are not working in the correct branch, you can switch to another branch by clicking on the branch name and selecting the correct branch from the dropdown menu.
+
+### Can't build any models in your developer schema (dataset) 
+
+If you encounter a message similar to:
+```
+Dataset stroopwafelshop:dbt_lbenninga was not found in location EU;
+```
+
+This most likely means that you did not specify the location of the dataset when setting-up the connection to BigQuery. dbt Cloud will try to create a dataset in the `US` location by default, but since the other datasets are in the `EU` this causes issues. To solve this, perform the following steps:
+1. In BigQuery, check if a new dataset (your developer schema) has been created in the `US` location. If it has, delete it.
+2. Go to the **Account Settings** in dbt by clicking on the "cog" icon in the top-right corner of the screen.
+3. Select the **Projects** tab, then select your project, which should be named *stroopwafelshop*.
+4. Now, select the **Configure Connection** button. In the new window, you can change the location of the dataset to `EU`. You also need to re-upload the service account JSON file, and then select **Save**. This will update the connection to BigQuery and the dataset location.
+5. Go back to the Cloud IDE by clicking the **Develop** button in the top-left corner. This will force the IDE to restart.
+6. Now, try to build the model(s) again. It should be able to create the dataset and the Views.
+7. Confirm that the dataset has been created in the `EU` location in BigQuery by inspecting it in the BigQuery UI.
+
+
+### dbt CLoud is giving non-sensical errors
+
+Sometimes dbt Cloud can give errors that don't make sense. For example, you might have updated a model but it is still complaining about an old version of the model. This is likely due to a caching issue in dbt Cloud. To solve this, perform the following steps:
+
+1. In the dbt Cloud command line, run `dbt clean`. This will remove all the compiled models and the cache.
+2. If the `target` folder in the **File Explorer** view  is not deleted, delete it manually.
+3. Try a "restart" of the IDE by clicking the three dots  in the bottom-left corner and select **Restart IDE**. This will force the IDE to restart.
+
+Hopefully this solves it. Luckily, these errors are rare and the IDE is generally very stable. Still, it's good to know how to handle these issues if they occur.
