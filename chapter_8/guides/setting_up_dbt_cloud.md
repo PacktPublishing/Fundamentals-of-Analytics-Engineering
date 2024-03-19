@@ -109,7 +109,13 @@ Select **Commit and sync** to store these changes in the repository. This is the
 
 **Creating a branch**
 
-A *branch* is a copy of the code that you can work on without affecting the main code, which lives in the `main` branch. This way, multiple developers can work in their own branch without interfering with each other. Think of it as having a single "main" Excel file that multiple people want to work on. A branch is similar to making a copy of this main Excel document, then making changes in your own copy, and then bringing these changes, once approved, back to the main file. This is also known as  *merging back into main*. Using this workflow, multiple developers can work simultaniosuly on their copies of the code (branches) without clashing/overwriting the main code (main branch). In dbt Cloud, you are required to create a branch before you can create new files, folders or make changes to existing files. Click on **Create branch** to create a new branch. You will be asked to name the branch. Fill in your name (for me it's `lbenninga`) and select **Create branch** (as shown in Figure 6).
+A *branch* is a copy of the code that you can work on without affecting the main code, which lives in the `main` branch. This way, multiple developers can work in their own branch without interfering with each other. Think of it as having a single "main" Excel file that multiple people want to work on. A branch is similar to making a copy of this main Excel document, then making changes in your own copy, and then bringing these changes, once approved, back to the main file. This is also known as  *merging back into main*. Using this workflow, multiple developers can work simultaniosuly on their copies of the code (branches) without clashing/overwriting the main code (main branch).
+
+> Note: Branch != Target schema (Dataset)
+>
+> Note that a branch in dbt Cloud is not the same as your [target schema](https://docs.getdbt.com/faqs/Project/which-schema). A branch is a copy of the code, while the target schema (dataset in BigQuery), is the holder of tables and views in your data warehouse. The branch is used to manage changes to the code, while the schema is used to manage the data. Think of the branch as a copy of the code, and the schema as a copy of the data.
+
+In dbt Cloud, you are required to create a branch before you can create new files, folders or make changes to existing files. Click on **Create branch** to create a new branch. You will be asked to name the branch. Fill in your name (for me it's `lbenninga`) and select **Create branch** (as shown in Figure 6).
 
 <img src="images/dbt_cloud/dbt_cloud_figure_6.png" alt="Figure 6 - Creating a branch" width="500"/>
 <p align="center">Figure 6 - Creating a branch</p>
@@ -119,7 +125,9 @@ Next, you will see the name of your branch in the top-left corner (`lbenninga` f
 <img src="images/dbt_cloud/dbt_cloud_figure_7.png" alt="Figure 7 - Newly created branch" width="500"/>
 <p align="center">Figure 7 - Newly created branch</p>
 
- This means that you are ready to start working on the project. Any changes you make, will appear in the changes window, and you can commit them to the branch. Once you are happy with the changes, you can merge them back into the main branch using the **Merge this branch to main** button. Every time you do that, however, you will need to create a new branch again before you can start making changes. This process repeats itself everytime you want to sync changes to the main branch. However, for the duration of chapter 8 it will not be necessary to merge into `main` until the very end of the chapter. Until then, you can keep saving and committing files into your own branch. For now, we will leave the branch as it is, and move on to the next step, which is testing the connection to BigQuery.
+ This means that you are ready to start working on the project. Any changes you make, will appear in the changes window, and you can commit them to the branch. Once you are happy with the changes, you can merge them back into the main branch using the **Merge this branch to main** button. Every time you do that, however, you will need to create a new branch again before you can start making changes. This process repeats itself everytime you want to sync changes to the main branch. 
+ 
+ However, for the duration of chapter 8 it will not be necessary to merge into `main` until the very end of the chapter. Until then, you can keep saving and committing files into your own branch. For now, we will leave the branch as it is, and move on to the next step, which is testing the connection to BigQuery.
 
 
 **Testing the BigQuery Connection**
