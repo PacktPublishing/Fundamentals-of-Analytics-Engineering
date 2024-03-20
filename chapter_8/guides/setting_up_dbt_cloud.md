@@ -191,13 +191,13 @@ Dataset stroopwafelshop:dbt_lbenninga was not found in location EU;
 ```
 
 This most likely means that you did not specify the location of the dataset when setting-up the connection to BigQuery. dbt Cloud will try to create a dataset in the `US` location by default, but since the other datasets are in the `EU` this causes issues. To solve this, perform the following steps:
-1. In BigQuery, check if a new dataset (your developer schema) has been created in the `US` location. If it has, delete it.
+1. In BigQuery, check that your developer dataset (e.g. `dbt_lbenninga`) has been created in the `US` location. If it has, delete it.
 2. Go to the **Account Settings** in dbt by clicking on the "cog" icon in the top-right corner of the screen.
 3. Select the **Projects** tab, then select your project, which should be named *stroopwafelshop*.
 4. Now, select the **Configure Connection** button. In the new window, you can change the location of the dataset to `EU`. You also need to re-upload the service account JSON file, and then select **Save**. This will update the connection to BigQuery and the dataset location.
 5. Go back to the Cloud IDE by clicking the **Develop** button in the top-left corner. This will force the IDE to restart.
-6. Now, try to build the model(s) again. It should be able to create the dataset and the Views.
-7. Confirm that the dataset has been created in the `EU` location in BigQuery by inspecting it in the BigQuery UI.
+6. Now, try to build the model(s) again. It should be able to create your developer dataset (`dbt_lbenninga` for me) in BigQuery, containing the models.
+7. Confirm that the dataset has indeed been created in the `EU` location in BigQuery by inspecting it in the BigQuery UI.
 
 
 ### dbt CLoud is giving non-sensical errors
