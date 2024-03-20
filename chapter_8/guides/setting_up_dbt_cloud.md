@@ -222,10 +222,7 @@ This most likely means that you did not specify the location of the dataset when
 
 ### dbt `build` fails
 
-If building a model fails, the error message is not shown directly. In order to see the message, you have to open up the command-line interface using the toggle at the bottom-left of the screen. Please see the video for this. [dbt Cloud Errors](images/dbt_cloud/dbt_cloud_build_errors.mov)
-
-<video src='images/dbt_cloud/dbt_cloud_build_errors.mov' width=180/>
-[![Demo CountPages alpha](videos/dbt_cloud/dbt_cloud_build_errors.mov)](videos/dbt_cloud/dbt_cloud_build_errors.mov)
+If building a model fails, the error message is not shown directly. In order to see the message, you have to open up the command-line interface using the toggle at the bottom-left of the screen. Please see the video for this.
 
 ### dbt CLoud is giving non-sensical errors
 
