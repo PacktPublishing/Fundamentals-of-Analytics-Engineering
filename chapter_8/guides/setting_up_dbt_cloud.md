@@ -220,9 +220,11 @@ This most likely means that you did not specify the location of the dataset when
 6. Now, try to build the model(s) again. It should be able to create your developer dataset (`dbt_lbenninga` for me) in BigQuery, containing the models.
 7. Confirm that the dataset has indeed been created in the `EU` location in BigQuery by inspecting it in the BigQuery UI.
 
-### dbt `build` fails
+### Finding the error message when `build` fails
 
-If building a model fails, the error message is not shown directly. In order to see the message, you have to open up the command-line interface using the toggle at the bottom-left of the screen. Please see the video for this.
+If building a model fails, the error message is not shown directly. In order to see the message, which can help finding the underlying issue, you have to open up the command-line interface using the toggle at the bottom-left of the screen. Please see the video for this:
+
+https://github.com/PacktPublishing/Fundamentals-of-Analytics-Engineering/assets/7990862/bf11150e-14c7-46fe-a8dc-3e0a4a076655
 
 ### dbt CLoud is giving non-sensical errors
 
