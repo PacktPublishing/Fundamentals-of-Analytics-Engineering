@@ -1,8 +1,5 @@
 # Setting up dbt Cloud
 
-> Alternatively you can watch the video of the steps
-
-https://github.com/PacktPublishing/Fundamentals-of-Analytics-Engineering/assets/7990862/0e58208e-3c8e-4c09-9496-36331ffd2451
 
 
 
@@ -28,6 +25,7 @@ contains the following sections:
 
 Let’s start!
 
+
 **Creating a dbt Cloud account**
 
 Create a dbt cloud account at https://cloud.getdbt.com/signup/. You can use the same
@@ -35,6 +33,10 @@ email you used to sign up for Google Cloud. dbt Cloud offers a free plan for a s
 perfect for our needs, refer to https://www.getdbt.com/pricing/ for more information on
 the pricing plans. Choose *stroopwafelshop* as the company name when creating your
 account.
+
+> Alternatively you can watch the video of the steps after creating the dbt account:
+
+> https://github.com/PacktPublishing/Fundamentals-of-Analytics-Engineering/assets/7990862/0e58208e-3c8e-4c09-9496-36331ffd2451
 
 Next, you will be asked to create a new project. You can name it *stroopwafelshop*, 
 and continue setting up a connection to the data warehouse.
