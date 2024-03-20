@@ -49,7 +49,7 @@ Now, select **BigQuery**. In the following screen you will be asked for credenti
 
 Next, locate the *dbt-cloud* service account key file on your computer, and select **Upload a Service Account JSON** file to upload it into the dbt Cloud interface. It should automatically fill in all the empty fields on the page.
 
-![Figure 2 - Uploading the service account JSON file](images/dbt_cloud/dbt_cloud_figure_2.png)
+<img src="images/dbt_cloud/dbt_cloud_figure_2.png" width="500"/>
 <p align="center">Figure 2 - Uploading the service account JSON file</p>
 
 
