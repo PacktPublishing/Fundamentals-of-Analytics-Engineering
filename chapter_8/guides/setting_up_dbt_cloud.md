@@ -16,8 +16,9 @@ contains the following sections:
 3. Initializing the project
 4. Creating a branch
 5. Testing the connection
-6. Deleting the example models
-7. Potential issues
+6. Building the example model
+8. Deleting the example models
+9. Potential issues
 
 Let’s start!
 
@@ -125,7 +126,7 @@ Next, you will see the name of your branch in the top-left corner (`lbenninga` f
 <img src="images/dbt_cloud/dbt_cloud_figure_7.png" alt="Figure 7 - Newly created branch" width="500"/>
 <p align="center">Figure 7 - Newly created branch</p>
 
- This means that you are ready to start working on the project. Any changes you make, will appear in the changes window, and you can commit them to the branch. Once you are happy with the changes, you can merge them back into the main branch using the **Merge this branch to main** button. Every time you do that, however, you will need to create a new branch again before you can start making changes. This process repeats itself everytime you want to sync changes to the main branch. 
+ This means that you are ready to start working on the project. Any changes you make, will appear in the changes window, and you can commit them to the branch. Once you are happy with the changes, you can merge them back into the main branch using the **Merge this branch to main** button. Every time you do that, however, you will need to create a new branch again before you can start making changes. This process repeats itself everytime you want to sync changes to the main branch.
  
  However, for the duration of chapter 8 it will not be necessary to merge into `main` until the very end of the chapter. Until then, you can keep saving and committing files into your own branch. For now, we will leave the branch as it is, and move on to the next step, which is testing the connection to BigQuery.
 
@@ -142,35 +143,55 @@ select * from stroopwafelshopdata.Employees
 Make sure that `Employees` is capitalized since BigQuery tables are case-sensitive. Then, select **Preview** at the bottom of the screen. This will select the Employees table from the `stroopwafelshopdata` dataset in BigQuery.
 
 The dbt Cloud IDE will send the SQL to be executed to the data warehouse, in this case
-BigQuery, and display the results in the IDE (as shown in Figure 5). 
+BigQuery, and display the results in the IDE (as shown in Figure 8).
 
 <img src="images/dbt_cloud/dbt_cloud_figure_8.png" alt="Figure 8 - Testing the connection" width="500"/>
 <p align="center">Figure 8 - Testing the connection</p>
 
 Since there are only a few rows returned, all will be displayed. This confirms that the connection works. You can close and disregard the `Untitled-1` file you just created.
 
+**Building the example model**
+
 Next, open up the `models` folder on the left-hand side of the screen. You should see a subfolder named `example`. This contains some example models that dbt Cloud has created for you. Click on `my_first_dbt_model.sql` to open it. It will display the model's code in the center of the screen. Preview it to show the results, as shown in Figure 9.
 
 <img src="images/dbt_cloud/dbt_cloud_figure_9.png" alt="Figure 9 - Previewing the example model" width="500"/>
 <p align="center">Figure 9 - Previewing the example model</p>
 
-You can see that the model is working, and that the connection to BigQuery is functioning correctly. You can play around with the other functionaltiy in the IDE if you want. Don't worry, you can't break anything. Once you are ready to continue, we will remove the `example` folder since we will be creating our own models.
+
+Now, next we will want to *build* the model, which means storing the model's results in the target schema (dataset) in BigQuery. This is commonly referred to as *materializing* the model. This is necessary currently the model only exists as a SQL file in the dbt Cloud IDE, and not as a table/view in BigQuery.
+
+ To do this, we we will first delete the `schema.yml` file since it includes some extra functionality that we don't want right now. Do that by clicking on the three dots next to the `schema.yml` file and selecting **Delete**. Then confirm the deletion by selecting **Delete** in the pop-up window as shown in Figure 10.
+
+<img src="images/dbt_cloud/dbt_cloud_figure_10.png" alt="Figure 10 - Deleting the `schema.yml`" width="400"/>
+<p align="center">Figure 10 - Deleting the `schema.yml`</p>
+
+ Next, try to build the model using the **Build** button. This will create your target schema (`dbt_lbenninga` for me) as a dataset in BigQuery, and then create the `my_first_dbt_model` table inside of it. After building the model, you should see a confirmation message at the left of the screen as shown in Figure 11.
+
+<img src="images/dbt_cloud/dbt_cloud_figure_11.png" alt="Figure 11 - Building `my_first_dbt_model`"  width="700"/>
+<p align="center">Figure 11 - Building "my_first_dbt_model"</p>
+
+Now, go to BigQuery and check if the model has been materialized. You should see the `my_first_dbt_model` table in the `dbt_lbenninga` dataset, as shown in Figure 12. Both were created when you ran *build* in dbt Cloud.
+
+<img src="images/dbt_cloud/dbt_cloud_figure_12.png" alt="Figure 12 - The model materialized in BigQuery" width="400"/>
+<p align="center">Figure 12 - The model materialized in BigQuery</p>
 
 **Deleting the example models**
 
-We don't need the `example` models since we will create our own. You can create/rename/delete files and folders in the **File explorer** window by using the three dots next to files/folders. Click on the three dots next to the `example` folder and select **Delete** as shown in Figure 10. Then confirm the deletion by selecting **Delete** in the pop-up window.
+From now on, we won't use the example models anymore. In the chapter, we will create our own models. To clean up the project, we will delete the `example` folder. To do this, click on the three dots next to the `example` folder and select **Delete**. Then confirm the deletion by selecting **Delete** in the pop-up window.
 
-<img src="images/dbt_cloud/dbt_cloud_figure_10.png" alt="Figure 10 - Deleting the example models" width="500"/>
-<p align="center">Figure 10 - Deleting the example models</p>
+ Next, you will see that the deleted files are listed in the changes window, as shown in Figure 13.
 
- Next, commit this change into the branch by selecting **Commit and sync**. Fill in a commit message, for example *Removed example models*, and select **Commit Changes**. Now, the `example` folder is removed from the branch and the changes are saved. You are ready to continueing working on the project.
+<img src="images/dbt_cloud/dbt_cloud_figure_13.png" alt="Figure 13 - Commiting the deletions" width="400"/>
+<p align="center">Figure 13 - Committing the deletions</p>
 
+ You can commit this change into your branch by selecting **Commit and sync**. Fill in a commit message, for example *Removed example models*, and select **Commit Changes**. Now, the `example` folder is removed from the branch and the changes are saved. Note however that eventhough we deleted the models in the IDE and saved these changes into our branch, [dbt Cloud will not delete materialized models from the data warehouse](https://docs.getdbt.com/faqs/Models/removing-deleted-models). You will have to do this manually by going back to BigQuery.  There, delete the `my_first_dbt_model` table in the `dbt_lbenninga` dataset as shown in Figure 13.
 
-Congratulations! You have successfully set up dbt Cloud and tested the connection to BigQuery. Continue from where you left off in  chapter 8, and start modeling the data in dbt Cloud.
+<img src="images/dbt_cloud/dbt_cloud_figure_14.png" alt="Figure 14 - Deleting the `my_first_dbt_model` table" width="400"/>
+<p align="center">Figure 14 - Deleting the `my_first_dbt_model` table</p>
+
+Once done, you cleaned up the project and are ready to start modeling the data in dbt Cloud. Check out the potential issues section to handle any issues you might encounter. After that, head back to the chapter to start modeling the Stroopwafelshop data.
 
 ## Potential issues
-
-Note the following potential issues if you are having trouble with dbt Cloud in the chapter.
 
 ### Errors in the connection to BigQuery
 
