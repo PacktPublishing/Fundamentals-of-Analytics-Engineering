@@ -1,5 +1,11 @@
 # Setting up dbt Cloud
 
+> Alternatively you can watch the video of the steps
+
+https://github.com/PacktPublishing/Fundamentals-of-Analytics-Engineering/assets/7990862/0e58208e-3c8e-4c09-9496-36331ffd2451
+
+
+
 **Requirements**
 - From [Setting up Google Cloud and BigQuery](setting_up_gcp_and_bigquery.md)
     - The *stroopwafelshopdata* BigQuery dataset
