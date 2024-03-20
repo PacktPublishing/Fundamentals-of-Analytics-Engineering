@@ -199,6 +199,12 @@ This most likely means that you did not specify the location of the dataset when
 6. Now, try to build the model(s) again. It should be able to create your developer dataset (`dbt_lbenninga` for me) in BigQuery, containing the models.
 7. Confirm that the dataset has indeed been created in the `EU` location in BigQuery by inspecting it in the BigQuery UI.
 
+### dbt `build` fails
+
+If building a model fails, the error message is not shown directly. In order to see the message, you have to open up the command-line interface using the toggle at the bottom-left of the screen. Please see the video for this. [dbt Cloud Errors](images/dbt_cloud/dbt_cloud_build_errors.mov)
+
+<video src='images/dbt_cloud/dbt_cloud_build_errors.mov' width=180/>
+[![Demo CountPages alpha](videos/dbt_cloud/dbt_cloud_build_errors.mov)](videos/dbt_cloud/dbt_cloud_build_errors.mov)
 
 ### dbt CLoud is giving non-sensical errors
 
