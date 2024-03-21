@@ -40,6 +40,11 @@ into Tableau Public.
 >If you want to see Tableau in its full glory, you can purchase a license, use a trial, or request
 an academic license (if you are a professor or student).
 
+
+> Note: Watch the video:
+> https://github.com/PacktPublishing/Fundamentals-of-Analytics-Engineering/assets/7990862/5d0f32dc-921a-46e8-95b5-eb6db3aaac61
+
+
 **Connecting to Google BigQuery**
 
 One of Tableau’s most appealing features is its multitude of connectors. Tableau connectors
