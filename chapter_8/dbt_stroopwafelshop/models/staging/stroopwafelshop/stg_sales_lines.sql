@@ -7,7 +7,7 @@ with
             id as sales_line_id,
             sales_id,
             product_id,
-            cast(promotion_id as int) as promotion_id,
+            promotion_id,
 
             -- Only generate a surrogate key for the promotion if it is not null
 
