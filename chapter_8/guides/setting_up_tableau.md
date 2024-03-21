@@ -19,6 +19,10 @@ following sections:
 
 Let’s start!
 
+You can watch the video of the steps (after downloading and installing Tableau) here:
+
+https://github.com/PacktPublishing/Fundamentals-of-Analytics-Engineering/assets/7990862/d04c313e-4a5f-4c14-9604-5f44dd26bbea
+
 **Downloading and installing Tableau Desktop**
 
 You can register a Tableau account and download a 14-day trial of Tableau Desktop on
@@ -39,10 +43,6 @@ into Tableau Public.
 >
 >If you want to see Tableau in its full glory, you can purchase a license, use a trial, or request
 an academic license (if you are a professor or student).
-
-You can watch the video of the steps here:
-https://github.com/PacktPublishing/Fundamentals-of-Analytics-Engineering/assets/7990862/487d03ef-e9fc-49d2-bd3a-2a2e8a5ae681
-
 
 **Connecting to Google BigQuery**
 
