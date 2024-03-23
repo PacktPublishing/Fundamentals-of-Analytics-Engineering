@@ -48,6 +48,12 @@ account by signing up using email at the bottom (as shown in Figure 1).
 Once the registration process is complete, you should see the main screen where we are
 welcomed by the Airbyte visual.
 
+> You can also view the following steps in this video
+
+https://github.com/PacktPublishing/Fundamentals-of-Analytics-Engineering/assets/7990862/884a348d-dd6a-4dca-9aa1-32d80b40decb
+
+
+
 Next, we want to create our first *connection*. In Airbyte, a connection loads data from a
 *source* to a *destination* , for instance from Google Sheets to Google BigQuery. Airbyte
 supports a variety of sources and destinations. Click to create the connection. Next up, you
