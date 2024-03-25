@@ -60,6 +60,12 @@ will not be charged anything. So, finger off the trigger button! Furthermore, yo
 on the page that you are working on a project called *My First Project*, which is the default
 project created for you.
 
+> You can watch the following steps in this video
+>
+> https://github.com/PacktPublishing/Fundamentals-of-Analytics-Engineering/assets/7990862/eb4f9024-7967-4ef5-bcdb-334349503bc1
+
+
+
 **Creating a Project**
 
 A project is the fundamental building block in Google Cloud, and most services need to be
