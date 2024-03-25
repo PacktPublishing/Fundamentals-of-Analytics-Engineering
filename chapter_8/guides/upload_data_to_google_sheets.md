@@ -13,7 +13,14 @@ sections:
 2. Downloading the Stroopwafelshop CSV’s
 3. Uploading the data into Google Sheets
 
+
+
+
 Let’s start!
+
+> You can view a video for the steps here:
+
+https://github.com/PacktPublishing/Fundamentals-of-Analytics-Engineering/assets/7990862/3e001731-9d34-4d65-976b-3a555a1def6d
 
 **Spreadsheets and Google Sheets**
 
