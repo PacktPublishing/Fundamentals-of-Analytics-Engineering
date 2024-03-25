@@ -35,8 +35,7 @@ the pricing plans. Choose *stroopwafelshop* as the company name when creating yo
 account.
 
 > Alternatively you can watch the video of the steps after creating the dbt account:
-
-> https://github.com/PacktPublishing/Fundamentals-of-Analytics-Engineering/assets/7990862/0e58208e-3c8e-4c09-9496-36331ffd2451
+https://github.com/PacktPublishing/Fundamentals-of-Analytics-Engineering/assets/7990862/0e58208e-3c8e-4c09-9496-36331ffd2451
 
 Next, you will be asked to create a new project. You can name it *stroopwafelshop*, 
 and continue setting up a connection to the data warehouse.
