@@ -204,7 +204,8 @@ you should create two more service accounts: one for dbt Cloud, and one for Tabl
 For the dbt service account, choose *dbt-cloud* as the name, and assign it the **BigQuery
 Data Editor** and **BigQuery User** roles during the creation process. Then generate a key
 and download it, like you did previously. Next, for the Tableau service account, choose
-tableau as the name, and assign it the **BigQuery Data Viewer** role for read-only access.
+tableau as the name, and assign it the **BigQuery Data Viewer** role for read-only access, and the **BigQuery User** role to access the datasets.
+
 Finally, create the key file and download it. Return to the **IAM** overview. It should list your
 email address and the three service accounts with their assigned roles, as shown in Figure
 8.
