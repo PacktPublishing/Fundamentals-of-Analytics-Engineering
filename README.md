@@ -56,7 +56,7 @@ To get the most out of this repository, it's recommended to read the book and us
 
 * Data Engineering with Python [[Packt]](https://www.packtpub.com/product/data-engineering-with-python/9781839214189) [[Amazon]](https://www.amazon.com/Data-Engineering-Python-datasets-pipelines-ebook/dp/B08DSLVFNR/ref=sr_1_1?crid=195QVX8M9DM5D&dib=eyJ2IjoiMSJ9.YwuIbS3Lv07h-fwiu9dE4mz4eixkwuqx8SQ3FnkALRKK69xr0tXJJS7tBo5esDT9FmfEpY-xrspI4kG0hwAoxFhK1INl0ElaAjdg8fbR0Qd7J5ElGGFASHhi2Bks-oiuPb7ERS228n0xEVOd2FqshXRE7yFBWQWQaEcIf1fR7sEG6zxO534c3GAfA-ew2QaKgpb0JtMbwWHca7QkXdwdQ16y5ro8T_MuiSol5wMfHUY.QFP23Y5a-Yp6DAFxK8JfSfPv8OQZet3YZHsJYlpDcIg&dib_tag=se&keywords=Data+Engineering+with+Python&qid=1713189152&sprefix=data+engineering+with+python%2Caps%2C351&sr=8-1)
 
-## Get to Know the Author
+## Get to Know the Authors
 **Juan Manuel Perafan**
  8 years of experience in the realm of analytics (5 years as a consultant). Juan was the first analytics engineer hired by Xebia back in 2020. Making him one of the earliest adopters of this way of working.
 Besides helping his clients realizing the value of their data, Juan is also very active in the data community. He has spoken at dozens of conferences and meetups around the world (including Coalesce 2023). Additionally, he is the founder of the Analytics Engineering meetup in the Netherlands as well as the Dutch dbt meetup
