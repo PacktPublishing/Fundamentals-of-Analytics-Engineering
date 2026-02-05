@@ -1,3 +1,5 @@
+<p align='center'><a href='https://www.eventbrite.com/e/machine-learning-and-generative-ai-system-design-workshop-tickets-1975103644168?aff=Github'><img src='https://static.packt-cdn.com/assets/images/packt+events/Sairam_ML_GenAI_Github_banner.png'/></a></p>
+
 # Fundamentals of Analytics Engineering
 
 <a href="https://www.packtpub.com/product/fundamentals-of-analytics-engineering/9781837636457"><img src="https://content.packt.com/_/image/original/B19305/cover_image_large.jpg" alt="no-image" height="256px" align="right"></a>
